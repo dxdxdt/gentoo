@@ -17,6 +17,11 @@ RDEPEND="!sys-libs/glibc"
 
 IUSE="static-libs"
 
+src_prepare() {
+	default
+	tc-export CC AR
+}
+
 src_compile() {
 	append-flags -fPIC
 
