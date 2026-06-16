@@ -26,6 +26,9 @@ LICENSE="GPL-2"
 SLOT="0"
 
 RDEPEND="!sys-fs/exfat-utils"
+DEPEND="
+	sys-apps/util-linux
+	elibc_musl? ( sys-libs/fts-standalone )"
 
 src_prepare() {
 	default
